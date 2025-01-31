@@ -1,0 +1,23 @@
+[advice]
+	addIgnoreFile = false
+	addIgnoredFile = false
+[alias]
+	recent = log -7 --graph --oneline
+	ss = status -s
+	unstage = restore --staged **
+	last = log -1 --oneline
+	c = commit
+	poh = push origin HEAD
+	aa = add --all
+	aacm = "!git add --all && git c -m "
+	smfe = submodule foreach
+	skipped = !git ls-files -v | grep \"^S\"
+	boottime = !systeminfo | find \"System Boot Time\"
+	pohfwl = push origin HEAD --force-with-lease
+	recently = log -7 --graph --pretty=format:\"%C(auto)%h%d%Creset %s %C(green)%cn%Creset %C(cyan)(%cr)%Creset\"
+	fpa = fetch --prune --all
+	skip = update-index --skip-worktree
+[diff]
+	tool = vscode
+[difftool "vscode"]
+	cmd = "code --wait --diff  "
