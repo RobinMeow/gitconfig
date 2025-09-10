@@ -2,9 +2,7 @@
 	addIgnoreFile = false
 	addIgnoredFile = false
 [alias]
-	recent = log -7 --graph --oneline
 	ss = status -s
-	unstage = restore --staged **
 	last = log -1 --oneline
 	c = commit
 	poh = push origin HEAD
@@ -14,9 +12,11 @@
 	skipped = !git ls-files -v | grep \"^S\"
 	boottime = !systeminfo | find \"System Boot Time\"
 	pohfwl = push origin HEAD --force-with-lease
-	recently = log -7 --graph --pretty=format:\"%C(auto)%h%d%Creset %s %C(green)%cn%Creset %C(cyan)(%cr)%Creset\"
 	fpa = fetch --prune --all
 	skip = update-index --skip-worktree
+	no-skip = update-index --no-skip-worktree
+	l = log -7 --graph --pretty=format:\"%C(auto)%h%d%Creset %s %C(green)%cn%Creset %C(cyan)(%cr)%Creset\"
+	crime = log --all --numstat --date=short --pretty=format:--%h--%ad--%aN
 [diff]
 	tool = vscode
 [difftool "vscode"]
